@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <!-- <h3 class="w3-padding-64"><b>Apoorva<br>Sharma</b></h3> -->
+    <h3 class="w3-padding-64"><b><br></b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <!-- <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About me</a>  -->
+    <a href="#education" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Education</a> 
+    <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Projects</a> 
+    <a href="#skills" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Skills</a> 
+    <!-- <a href="#resume" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Resume</a>  -->
+    <!-- <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Blogs</a>  -->
+    <!-- <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a> -->
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Company Name</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <!-- <h1 class="w3-jumbo"><b>Apoorva Sharma</b></h1> -->
+    <h1 class="w3-xxxlarge w3-text-red"><b>Apoorva Sharma</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-quarter">
+      <img src="apoorva1.png" style="width:100%" onclick="onClick(this)" alt="myimage">
+      <!-- <img src="/w3images/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+      <img src="/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs"> -->
+    </div>
+
+    <div class="w3-threequarter">Hello 👋 my name is Apoorva. Welcome to my website. <br> <br>A little bit about myself - I am an ardent hiker, passionate coder and an avid reader. Being a bay area native, Yosemite national park is one of my favorite places for hiking. I enjoy travelling to national parks and camping there. I have travelled to almost all national parks in western United States. When I am not travelling, I am busy with coding or reading. I like to read fantasy novels and develop web applications.
+      <!-- <img src="/w3images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+      <img src="/w3images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+      <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design"> -->
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="w3-container" id="education" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Education</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <li>Masters in Computer Science, California State University East Bay, 2020.GPA – 3.91/4.0</li>
+    <li>Certification in Computer Science Applications & Development, College of San Mateo, 2018.   GPA – 4.0/4.0</li>
+    <li>Bachelor of Science, University of Rajasthan, 2011. GPA – 3.15/4.0</li>
+    <p></p>
+  </div>
+  
+  <!-- Projects -->
+  <div class="w3-container" id="projects" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Projects</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2 class="w2-xx-large w3-text-dark-grey"><b>Twitter-based application for the Facebook platform</b></h2>
+    <li>Created a Facebook app that allowed users to post tweets to their timeline and share tweets as direct messages.</li>
+    <li>Utilized facebook Graph API for information retrieval and Google Cloud Datastore for application data persistence.</li>
+    <li>Deployed application on Google App Engine and analyzed usage via Facebook and google analytics.</li>
+    <br>
+    <h2 class="w2-xx-large w3-text-dark-grey"><b>Data set reduction using Map-Reduce</b></h2>
+    <li>Handled a big data set of 20M online movie reviews to extract a relevant subset of reviews, reducing it by 73%.</li>
+    <li>Designed and implemented a bucket-based algorithm using Big Data stack to identify the outliers for each reviewer. </li>
+    <br>
+    <h2 class="w2-xx-large w3-text-dark-grey"><b>Image labeling using Google Cloud Vision API</b></h2>
+    <li>Created a web application in Express and NodeJS backed by Google Cloud’s Vision API for Image labeling. </li>
+    <li>The application is deployed on Google App Engine and uses REST calls to access pre-trained ML models.</li>
+    <br>
+    <h2 class="w2-xx-large w3-text-dark-grey"><b>PhotoSite Application</b></h2>
+    <li>Created a web application for creating user profiles, upload images, and add comments to user profiles. </li>
+    <li>The application was created using Ruby on Rails utilizing MVC architecture and deployed on Amazon EC2.</li>
+    <li>Implementation included creating entity models, writing controllers, and running migrations to update databases.</li>
+    <br>
+    <h2 class="w2-xx-large w3-text-dark-grey"><b>Data Structures, Algorithms & Operating Systems </b></h2>
+    <li>Developed a concurrent system using message passing and semaphores to avoid deadlock and thread starvation.</li>
+    <li>Simulated LRU based page replacement algorithm and tested using a mocked schedule of page references.</li>
+    <li>Implemented CPU scheduling algorithms and compared FIFO with Round-Robin scheme.</li>
+    <br>
+    <h2 class="w2-xx-large w3-text-dark-grey"><b>Student Registration Platform </b></h2>
+    <li>Developed a university web system for user registration and dynamic course management for students and faculty.</li>
+    <li>The application was created using the Spring MVC framework and Hibernate ORM for MySQL integration.</li>
+    <br>
+    <h2 class="w2-xx-large w3-text-dark-grey"><b>Linux Administration </b></h2>
+    <li>Written shell scripts to execute system administration tasks related to files, processes, and user management.</li>
+    <li>Created a script-based phone directory application with facilities to search, add, modify, and delete entries. </li>
+    <br>
+  </div>
+
+
+  <!-- Skills -->
+  <div class="w3-container" id="skills" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Skills</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <li>Expert knowledge of Java</li>
+    <li>Knowledge of development tools like Git, MySQL, NoSQL, Linux, Bash scripting</li>
+    <li>Development experience in cloud-based platforms(IaaS/PaaS/SaaS) like AWS and Google Cloud.</li>
+    <li>Good knowledge of Data Structures, Object-Oriented Design principles, and Algorithms</li>
+    <li>Development experience with Spring MVC framework, REST-based services, and testing tools. </li>
+  </div>
+
+  <!-- <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+        <li class="w3-padding-16">Floorplanning</li>
+        <li class="w3-padding-16">10 hours support</li>
+        <li class="w3-padding-16">Photography</li>
+        <li class="w3-padding-16">20% furniture discount</li>
+        <li class="w3-padding-16">Good deals</li>
+        <li class="w3-padding-16">
+          <h2>$ 199</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+        </li>
+      </ul>
+    </div> -->
+        
+    <!-- <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-red w3-xlarge w3-padding-32">Pro</li>
+        <li class="w3-padding-16">Floorplanning</li>
+        <li class="w3-padding-16">50 hours support</li>
+        <li class="w3-padding-16">Photography</li>
+        <li class="w3-padding-16">50% furniture discount</li>
+        <li class="w3-padding-16">GREAT deals</li>
+        <li class="w3-padding-16">
+          <h2>$ 249</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  </div> -->
+  
+  <!-- Contact -->
+  <!-- <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+    </form>  
+  </div> -->
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Thank you! </p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
